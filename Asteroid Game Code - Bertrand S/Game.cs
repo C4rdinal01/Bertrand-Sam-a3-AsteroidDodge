@@ -1,6 +1,7 @@
 ﻿// Include the namespaces (code libraries) you need below.
 using Raylib_cs;
 using System;
+using System.Diagnostics.Metrics;
 using System.Dynamic;
 using System.Net;
 using System.Numerics;
@@ -13,6 +14,7 @@ namespace MohawkGame2D
     public class Game
     {
         Player ship;
+        Asteroid meteor;
 
         Vector2 gravity = new Vector2(0, 500);
 
@@ -22,7 +24,6 @@ namespace MohawkGame2D
         int StarsCount = 0;
 
         Texture2D texture1;
-
         Vector2 playerPosition = new Vector2(Input.GetMouseX(), Input.GetMouseY());
 
         public void Setup()
@@ -38,6 +39,8 @@ namespace MohawkGame2D
             ship = new Player();
             ship.Setup();
 
+            meteor = new Asteroid();
+            meteor.Setup();
         }
 
         public void Update()
@@ -45,6 +48,7 @@ namespace MohawkGame2D
             Window.ClearBackground(Color.Black);
 
             ship.Update();
+            meteor.Update();
 
             DrawStar(); // replace with Stars.cs
             DrawAsteroid(); // make a public class (Asteroids.cs)
