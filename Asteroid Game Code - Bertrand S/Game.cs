@@ -54,16 +54,6 @@ namespace MohawkGame2D
             
         }
 
-        void DrawPlayerIcon()
-        {
-
-            Graphics.Rotation = 0.0f;
-            Graphics.Scale = 1.0f;
-            Graphics.LoadTexture("Textures/player_icon.png");
-            Graphics.Draw(texture1, playerPosition);
-
-        }
-
         public void DrawStar()
         {
             if (StarsCount <= 60)
