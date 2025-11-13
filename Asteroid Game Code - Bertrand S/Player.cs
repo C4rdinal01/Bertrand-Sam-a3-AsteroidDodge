@@ -12,10 +12,15 @@ namespace MohawkGame2D
     {
         Texture2D texture1;
         Vector2 playerPosition = new Vector2(Input.GetMouseX(), Input.GetMouseY());
+        Vector2 playerSize;
+
+        Vector2 collision; // to be added
 
         public void Setup()
         {
             texture1 = Graphics.LoadTexture("Textures/player_icon.png");
+
+            playerSize = new Vector2(texture1.Height, texture1.Width);
         }
 
         public void Update()

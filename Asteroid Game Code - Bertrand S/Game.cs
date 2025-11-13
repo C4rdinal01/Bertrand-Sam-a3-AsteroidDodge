@@ -25,7 +25,6 @@ namespace MohawkGame2D
 
         Vector2 playerPosition = new Vector2(Input.GetMouseX(), Input.GetMouseY());
 
-
         public void Setup()
         {
             Window.SetSize(400, 400);
