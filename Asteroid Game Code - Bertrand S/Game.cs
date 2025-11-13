@@ -29,7 +29,7 @@ namespace MohawkGame2D
         public void Setup()
         {
             Window.SetSize(400, 400);
-            Window.SetTitle("Asteroid Dodge Concept One");
+            Window.SetTitle("Asteroid Dodge");
 
             // initialize all game objects!
             // ideally here we would have the Asteroids being given their coordinates, the score calculator resetting etc...
