@@ -51,8 +51,7 @@ namespace MohawkGame2D
             meteor.Update();
 
             DrawStar(); // replace with Stars.cs
-            DrawAsteroid(); // make a public class (Asteroids.cs)
-            // ScoreCounter();
+            
         }
 
         void DrawPlayerIcon()
@@ -85,19 +84,6 @@ namespace MohawkGame2D
             }
         }
 
-        void DrawAsteroid()
-        {
-            // Randomly draw an Asteroid (using the texture provided) along the X Axis above the screen
-            // and have them fall at a moderate speed.
-            // Once they fall from the bottom of the screen, SCORE++ and the asteroid will be respawned randomly along the X axis once again.
-
-            // Asteroid should be roughly 20x20 pixels <-- for collision as well as the texture size
-
-            Graphics.Rotation = 0.0f;
-            Graphics.Scale = 1.0f;
-            Graphics.LoadTexture("Textures/asteroid_icon.png");
-
-        }
     }
 
 }
